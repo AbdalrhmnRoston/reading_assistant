@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0 ;
+        }
+        .show-script {
+            width: 700px;
+            max-width: 100%;
+            min-height: 20vh;
+            margin: 0 auto;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 35px;
+            word-spacing: 10px;
+            line-height: 50px;
+            position: relative;
+        }
+        .select-mark {
+            width: 100%;
+            height: 50px;
+            background-color: rgba(0, 0, 0, 0.207);
+            position: absolute;
+            top: 10px;
+            transition: .3s;
+        }
+        .input-script {
+            width: 100% ;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        .input-script textarea {
+            width: 100%;
+            min-height: 250px;
+            margin-bottom: 20px;
+            direction: rtl;
+        }
+        #print-text {
+            height: 60px;
+            background-color: black;
+            color: white;
+            font-size: 22px;
+        }
+        .show-script .timer {
+            width: fit-content;
+            margin: 55px auto 0;
+            padding: 40px;
+            background-color: black;
+            color: white;
+            border-radius: 50%;
+        }
+        .settings {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+        .settings div {
+            width: 305px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+        .settings input {
+            width: 50px;
+            height: 25px;
+            border: 2px solid black;
+            border-radius: 3px;
+        }
+        .settings div label {
+            width: 150px;
+        }
+        .settings button {
+            padding: 5px 50px;
+            background-color: black;
+            color: white;
+            cursor: pointer;
+        } 
+    </style>
+</head>
+<body>
+    
+    <div class="show-script">
+            <h1 class="timer">1</h1>
+            <p></p>
+            <div class="select-mark"></div>
+    </div>
+
+
+    <div class="input-script">
+        <textarea ></textarea>
+        <button id="print-text">Show</button>
+    </div>
+
+    <div class="settings">
+        <div class="">
+            <label >setting Time Down</label>
+            <input type="number" id="time-down">
+        </div>
+        <div>
+            <label for="">Time Start</label>
+            <input type="number" id="time-starting">
+        </div>
+        <button id="save-settings">Save</button>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
