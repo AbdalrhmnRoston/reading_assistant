@@ -74,6 +74,3 @@ saveSettings.addEventListener('click', () => {
 function addDataOnLocaleStorge () {
     window.localStorage.setItem('Data', JSON.stringify(data)) ;
 } ;
-
-
-
